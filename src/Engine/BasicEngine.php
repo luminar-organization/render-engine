@@ -13,15 +13,10 @@ class BasicEngine implements RenderEngineInterface
      */
     protected string $viewsPath;
 
-    /**
-     * @var AbstractController $abstractController
-     */
-    protected AbstractController $abstractController;
 
-    public function __construct(string $viewsPath, AbstractController $abstractController, array $options = [])
+    public function __construct(string $viewsPath, array $options = [])
     {
         $this->viewsPath = rtrim($viewsPath, '/');
-        $this->abstractController = $abstractController;
     }
 
     /**
@@ -37,6 +32,6 @@ class BasicEngine implements RenderEngineInterface
 
         ob_start();
         include $templateFile;
-        return new Response(ob_get_clean(), 200, $this->abstractController);
+        return new Response(ob_get_clean(), 200);
     }
 }

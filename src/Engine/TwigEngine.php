@@ -18,20 +18,13 @@ class TwigEngine implements RenderEngineInterface
     protected Environment $twig;
 
     /**
-     * @var AbstractController $abstractController
-     */
-    protected AbstractController $abstractController;
-
-    /**
      * @param string $viewsPath
-     * @param AbstractController $abstractController
      * @param array $options
      */
-    public function __construct(string $viewsPath, AbstractController $abstractController, array $options = [])
+    public function __construct(string $viewsPath, array $options = [])
     {
         $loader = new FilesystemLoader($viewsPath);
         $this->twig = new Environment($loader, $options);
-        $this->abstractController = $abstractController;
     }
 
     /**
@@ -44,6 +37,6 @@ class TwigEngine implements RenderEngineInterface
      */
     public function render(string $template, array $data = []): Response
     {
-        return new Response($this->twig->render($template . '.twig', $data), 200, $this->abstractController);
+        return new Response($this->twig->render($template . '.twig', $data), 200);
     }
 }

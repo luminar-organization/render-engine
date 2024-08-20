@@ -11,7 +11,7 @@ class ViewTest extends TestCase
 {
     public function testView()
     {
-        $engine = new BasicEngine(__DIR__ . DIRECTORY_SEPARATOR . 'Engine' . DIRECTORY_SEPARATOR . 'templates', new AbstractController());
+        $engine = new BasicEngine(__DIR__ . DIRECTORY_SEPARATOR . 'Engine' . DIRECTORY_SEPARATOR . 'templates');
         $view = new View($engine);
         $result = $view->render('example', ['name' => 'Luminar']);
         $this->assertStringContainsString("Hello, Luminar", $result->getResponse());

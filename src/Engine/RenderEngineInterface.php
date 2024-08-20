@@ -7,7 +7,7 @@ use Luminar\Http\Response;
 
 interface RenderEngineInterface
 {
-    public function __construct(string $viewsPath,AbstractController $abstractController, array $options = []);
+    public function __construct(string $viewsPath,array $options = []);
 
     public function render(string $template, array $data = []): Response;
 }
