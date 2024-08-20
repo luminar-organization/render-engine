@@ -1,4 +1,6 @@
 # Luminar Render Engine
+![Tests Status](https://img.shields.io/github/actions/workflow/status/luminar-organization/core/tests.yml?label=Tests)
+
 A custom render engine designed for the Luminar PHP Framework.
 
 ## Features
