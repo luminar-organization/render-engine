@@ -2,7 +2,6 @@
 
 namespace Luminar\RenderEngine\Tests\Engine;
 
-use Luminar\Http\Controller\AbstractController;
 use Luminar\RenderEngine\Engine\TwigEngine;
 use PHPUnit\Framework\TestCase;
 use Twig\Error\LoaderError;

@@ -2,7 +2,6 @@
 
 namespace Luminar\tests;
 
-use Luminar\Http\Controller\AbstractController;
 use Luminar\RenderEngine\Engine\BasicEngine;
 use Luminar\RenderEngine\View;
 use PHPUnit\Framework\TestCase;

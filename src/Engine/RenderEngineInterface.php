@@ -2,7 +2,6 @@
 
 namespace Luminar\RenderEngine\Engine;
 
-use Luminar\Http\Controller\AbstractController;
 use Luminar\Http\Response;
 
 interface RenderEngineInterface

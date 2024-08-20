@@ -2,9 +2,7 @@
 
 namespace Luminar\RenderEngine\Engine;
 
-use Luminar\Http\Controller\AbstractController;
 use Luminar\Http\Response;
-use Luminar\RenderEngine\Exceptions\EngineException;
 
 class BasicEngine implements RenderEngineInterface
 {
